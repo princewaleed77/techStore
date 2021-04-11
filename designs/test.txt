@@ -1,0 +1,22 @@
+عملنا قاعدة البيانات الاول
+نعمل الكلاسات وده هاتبقى عامة ممكن تستخدمها فى اى مشروع تحتاجها فيه
+
+1 - request classes (get, post)
+2 - session classes (session, session_start(),......)
+3 - database classes (crud operation)
+---------------------------------------
+4 - validation classes
+كل قاعدة هايبقى ليها كلاس خاصة بيها بكل مشتملاتها
+مثال 
+required,
+ empty,
+ numeric,
+ string,
+  errors,
+    and so on
+هايكون ليهم انترفيس واحد وهما بيعملو امبليمنت منه
+وهايكون عندنا كلاس اساسي المايسترو بتاع الليله ده كلها 
+required|numeric
+
+-------------------------------
+5 - 
