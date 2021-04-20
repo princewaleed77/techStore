@@ -33,14 +33,9 @@ if(! empty($address)){
 }
 // لو فى اخطاء هانقراها ونخزنها فى السيشن
 // نروح نعرضها فوق الفورم بتاعنا فى صفحة الكارت
-
-var_dump($valid->hasErrors());
 if($valid->hasErrors()){
     $session->set('errors',$valid->getErrors());
-//    echo '<pre>';
-//    print_r($session->get('errors'));
-//    echo '</pre>'; 
-   $request->redirect('cart.php');
+    $request->redirect('cart.php');
 }else{
     $order = new Order;
     $order->insert("name, email, phone, address", "'$name','$email', '$phone','$address'");

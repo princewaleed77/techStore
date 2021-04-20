@@ -70,7 +70,7 @@
 					<?php if ($session->has("errors")): ?>
 						<div class="alert aler-danger">
 							<?php foreach ($session->get("errors") as $err): ?>
-								<p class="mb-0"><?= $err; ?></p>
+								<p class="mb-0 alert alert-danger"><?= $err; ?></p>
 							<?php endforeach; $session->remove("errors") ?>
 						</div>
 					<?php endif; ?>
