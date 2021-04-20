@@ -9,7 +9,7 @@ if($request->getHas('keyword')){
 	$keyword = "";
 }
 
-$pr = new Product;
+
 $prods = $pr->sellectWhere("name like '%$keyword%'","id, name, price, img")
 
 ?>

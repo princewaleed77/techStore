@@ -49,13 +49,16 @@ class Validator
     //  اعمل حاجة تشيك على الاخطاء عشان اتعامل بيها مع قاعدة البيانات لو مفيش اخطاء هاحفظ البيانات
     public function hasErrors()
     {
-        return !empty($errors);
-        // if (empty($errors)) {
+          return !empty($this->errors);
+
+        // if (empty($errors)) { // lw fady hyrg3 false 
         //     return false;
         // }else
         // {
-        //     return true;
+        //     return true;  // lw feeh errors hyrg3 ture
         // }
+
+      
     }
 }
 ?>

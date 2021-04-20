@@ -29,21 +29,21 @@ if(! empty($email)){
     $valid->validate('phone', $phone, ['required', 'str', 'max']);
 
 if(! empty($address)){
-    $valid->validate('address', $address, [ 'str', 'max']);
+    $valid->validate('address', $address, ['str', 'max']);
 }
 // لو فى اخطاء هانقراها ونخزنها فى السيشن
 // نروح نعرضها فوق الفورم بتاعنا فى صفحة الكارت
+
+var_dump($valid->hasErrors());
 if($valid->hasErrors()){
-    $session->set("errors", $valid->getErrors());
-    $request->redirect("cart.php");
-}
-
-else
-{
-
-// $order = new Order;
-// $order->insert("name", "email", "phone", "address", "'$name', '$email', '$phone', '$address'");
-
+    $session->set('errors',$valid->getErrors());
+//    echo '<pre>';
+//    print_r($session->get('errors'));
+//    echo '</pre>'; 
+   $request->redirect('cart.php');
+}else{
+    $order = new Order;
+    $order->insert("name, email, phone, address", "'$name','$email', '$phone','$address'");
 }
 
 }
