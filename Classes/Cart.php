@@ -62,6 +62,10 @@ class Cart
         unset($_SESSION['cart'][$key]);
         
     }
+    public function emptyCart()
+    {
+        $_SESSION['cart'] = [];
+    }
 
 
 
