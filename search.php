@@ -20,7 +20,7 @@ $prods = $pr->sellectWhere("name like '%$keyword%'","id, name, price, img")
 		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="uploads/images/shop_background.jpg"></div>
 		<div class="home_overlay"></div>
 		<div class="home_content d-flex flex-column align-items-center justify-content-center">
-			<h2 class="home_title">Search results for: keyword here</h2>
+			<h2 class="home_title">Search results for: <?= $keyword?></h2>
 		</div>
 	</div>
 
@@ -36,6 +36,7 @@ $prods = $pr->sellectWhere("name like '%$keyword%'","id, name, price, img")
 						<div class="sidebar_section">
 							<div class="sidebar_title">Categories</div>
 							<ul class="sidebar_categories">
+							
 							<?php foreach($cats as $cat){ ?>
 								<li><a href="href="category.php?id=<?=$cat['id'];?>"><?= $cat['name'];?></a></li>
 							<?php } ?>

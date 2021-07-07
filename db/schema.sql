@@ -6,6 +6,7 @@ CREATE TABLE cats (
   PRIMARY KEY(id)
 );
 -- --------------------------------------- products table -------------------------------
+
 CREATE TABLE products (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   name VARCHAR(255) NOT NULL,

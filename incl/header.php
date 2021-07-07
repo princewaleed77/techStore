@@ -1,12 +1,12 @@
-<?php require_once("app.php"); ?>
-<?php 
-use techstore\Classes\Models\Cats;
+<?php require_once "app.php";?>
+<?php
 use techstore\Classes\Cart;
+use techstore\Classes\Models\Cats;
 $c = new Cats;
 $cats = $c->sellectAll("id, name");
 
-$ct=new Cart;
-$cont=$ct->count();
+$ct = new Cart;
+$cont = $ct->count();
 $cartCount = $cont;
 $sum = $ct->total();
 
@@ -20,27 +20,27 @@ $sum = $ct->total();
 <meta name="description" content="TechStore">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/bootstrap4/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="<?= URL;?>assets/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/plugins/slick-1.8.0/slick.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/main_styles.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/responsive.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/shop_styles.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/shop_responsive.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/product_styles.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/product_responsive.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/cart_styles.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/cart_responsive.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/contact_styles.css">
-<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/plugins/slick-1.8.0/slick.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/main_styles.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/shop_styles.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/shop_responsive.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/product_styles.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/product_responsive.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/cart_styles.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/cart_responsive.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/contact_styles.css">
+<link rel="stylesheet" type="text/css" href="<?=URL;?>assets/css/contact_responsive.css">
 
 </head>
 
 <body>
 
 <div class="super_container">
-	
+
 	<!-- Header -->
 	<header class="header">
 		<!-- Header Main -->
@@ -66,13 +66,13 @@ $sum = $ct->total();
 												<span class="custom_dropdown_placeholder clc">All Categories</span>
 												<i class="fas fa-chevron-down"></i>
 												<ul class="custom_list clc">
-												<?php foreach($cats as $cat){?>
-													<li><a class="clc" href="#"><?= $cat['name'];?></a></li>
+												<?php foreach ($cats as $cat) {?>
+													<li><a class="clc" href="#"><?=$cat['name'];?></a></li>
 													<?php }?>
 												</ul>
 											</div>
 										</div>
-										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="<?= URL;?>assets/images/search.png" alt=""></button>
+										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="<?=URL;?>assets/images/search.png" alt=""></button>
 									</form>
 								</div>
 							</div>
@@ -91,7 +91,7 @@ $sum = $ct->total();
 									</div>
 									<div class="cart_content">
 										<div class="cart_text"><a href="<?=URL;?>cart.php">Cart</a></div>
-										<div class="cart_price">$<?= $sum;?></div>
+										<div class="cart_price">$<?=$sum;?></div>
 									</div>
 								</div>
 							</div>
@@ -100,14 +100,14 @@ $sum = $ct->total();
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Main Navigation -->
 
 		<nav class="main_nav">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						
+
 						<div class="main_nav_content d-flex flex-row">
 
 							<!-- Categories Menu -->
@@ -119,9 +119,9 @@ $sum = $ct->total();
 								</div>
 
 								<ul class="cat_menu">
-								<?php foreach($cats as $cat){ ?>
-									<li><a href="category.php?id=<?= $cat['id'];?>"><?= $cat['name'];?> <i class="fas fa-chevron-right ml-auto"></i></a></li>
-								<?php } ?>
+								<?php foreach ($cats as $cat) {?>
+									<li><a href="category.php?id=<?=$cat['id'];?>"><?=$cat['name'];?> <i class="fas fa-chevron-right ml-auto"></i></a></li>
+								<?php }?>
 								</ul>
 							</div>
 
@@ -140,6 +140,5 @@ $sum = $ct->total();
 				</div>
 			</div>
 		</nav>
-	
+
 	</header>
-	

@@ -6,8 +6,9 @@ use techstore\Classes\Cart;
 use techstore\Classes\Models\Order;
 use techstore\Classes\Models\OrderDetail;
 use techstore\Classes\Validation\Validator;
+$cart = new Cart;
 
-if ($request->postHas('submit')) {
+if ($request->postHas('submit') && $cart->count() !==0) {
 
     $name = $request->post('name');
     $email = $request->post('email');
@@ -36,7 +37,6 @@ if ($request->postHas('submit')) {
         // store in database order table , and orderdetail table
         $order = new Order;
         $orderDetail = new OrderDetail;
-        $cart = new Cart;
         $orderId = $order->insertAndGetId("name, email, phone, address", "'$name','$email', '$phone','$address'");
         //add  order detail to database.
 

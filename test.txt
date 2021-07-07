@@ -20,3 +20,5 @@ required|numeric
 
 -------------------------------
 5 - 
+
+note: no admin dashboard yet

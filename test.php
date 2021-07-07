@@ -49,7 +49,18 @@ use techstore\Classes\Cart;
 // $ct=new Cart;
 // $cont=$ct->count();
 // echo $cont;
+
 echo '<pre>';
 print_r($_SESSION['cart']);
 echo '</pre>';
+
+
+// $session->destroy('cart');
+
+// echo '<pre>';
+// print_r($_SESSION['cart']);
+// echo '</pre>';
+
+
+
 ?>
